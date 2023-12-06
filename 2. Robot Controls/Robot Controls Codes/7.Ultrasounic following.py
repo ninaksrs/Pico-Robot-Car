@@ -21,8 +21,9 @@ ultrasonic = ultrasonic()
 #initialization oled
 i2c=I2C(1, scl=Pin(15),sda=Pin(14), freq=100000)
 oled = SSD1306_I2C(128, 32, i2c)
+
 #Define variables
-global time_ul, music_i, t_turn, i_turn, t_turn, music_back
+global time_ul, music_i, i_run, i_turn, t_turn, music_back
 music_i = 0
 time_ul = 0
 i_run = 0

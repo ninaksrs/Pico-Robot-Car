@@ -23,12 +23,10 @@ Tracing_4 = machine.Pin(5, machine.Pin.IN)
 
 while True:
     
-    #四路循迹引脚电平状态
     #Four channel tracking pin level status
     # 0 0 X 0
     # 1 0 X 0
     # 0 1 X 0
-    #处理右锐角和右直角的转动
     #Handle the rotation of right acute angle and right right right angle
     if (Tracing_1.value() == 0 or Tracing_2.value() == 0) and Tracing_4.value() == 0:
         Motor.Car_Right(120,120)
@@ -37,12 +35,10 @@ while True:
         oled.text('Turn Right', 0, 0)
         #time.sleep(0.08)
         
-    #四路循迹引脚电平状态
     #Four channel tracking pin level status
     # 0 X 0 0       
     # 0 X 0 1 
     # 0 X 1 0       
-    #处理左锐角和左直角的转动
     #Handle the rotation of left sharp angle and left right angle
     elif Tracing_1.value() == 0 and (Tracing_3.value() == 0 or Tracing_4.value() == 0):
         Motor.Car_Left(120,120)
@@ -52,7 +48,6 @@ while True:
         #time.sleep(0.08)
         
     # 0 X X X
-    #最左边检测到
     #Leftmost detected
     elif Tracing_1.value() == 0:
         Motor.Car_Left(100,100)
@@ -61,7 +56,6 @@ while True:
         oled.text('Turn Left', 0, 0)
     
     # X X X 0
-    #最右边检测到
     #Rightmost detected
     elif Tracing_4.value() == 0:
         Motor.Car_Right(100,100)
@@ -70,7 +64,6 @@ while True:
         oled.text('Turn Right', 0, 0)
 
     # X 0 1 X
-    #处理左小弯
     #Deal with small left bend
     elif Tracing_2.value() == 0 and Tracing_3.value() == 1:
         Motor.Car_Run(0,100)
@@ -79,7 +72,6 @@ while True:
         oled.text('Left', 0, 0)
 
     # X 1 0 X  
-    #处理右小弯
     #Handle small right bend
     elif Tracing_2.value() == 1 and Tracing_3.value() == 0:
         Motor.Car_Run(100,0)
@@ -88,7 +80,6 @@ while True:
         oled.text('Right', 0, 0)
 
     # X 0 0 X
-    #处理直线
     #Processing line
     elif Tracing_2.value() == 0 and Tracing_3.value() == 0:
         Motor.Car_Run(200,200)
@@ -99,5 +90,4 @@ while True:
     pixels.show()
     oled.show()
     oled.fill(0)
-#其他时小车保持上一个小车运行状态
 #In other cases, the trolley keeps the previous trolley running

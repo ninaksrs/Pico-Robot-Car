@@ -1,0 +1,21 @@
+IR Key: 1, Remote Button: Power
+IR Key: 3, Remote Button: Up
+IR Key: 5, Remote Button: Light
+IR Key: 9, Remote Button: Left
+IR Key: 11, Remote Button: Sound
+IR Key: 13, Remote Button: Right
+IR Key: 17, Remote Button: Turn Left
+IR Key: 19, Remote Button: Down
+IR Key: 21, Remote Button: Turn Right
+IR Key: 25, Remote Button: +
+IR Key: 27, Remote Button: 0
+IR Key: 29, Remote Button: -
+IR Key: 33, Remote Button: 1
+IR Key: 35, Remote Button: 2
+IR Key: 37, Remote Button: 3
+IR Key: 41, Remote Button: 4
+IR Key: 43, Remote Button: 5
+IR Key: 45, Remote Button: 6
+IR Key: 49, Remote Button: 7
+IR Key: 51, Remote Button: 8
+IR Key: 53, Remote Button: 9
